@@ -8,6 +8,54 @@ body {
     text-align: center;
 }
 
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-links .pagination {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination-links .pagination li {
+    margin: 0;
+}
+
+.pagination-links .pagination li a,
+.pagination-links .pagination li span {
+    padding: 10px 16px;
+    background-color: #007bff; /* Primary blue color */
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-links .pagination li a:hover,
+.pagination-links .pagination li span:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+}
+
+.pagination-links .pagination .disabled a,
+.pagination-links .pagination .disabled span {
+    background-color: #ccc; /* Light gray for disabled */
+    color: #777;
+    cursor: not-allowed;
+}
+
+.pagination-links .pagination .active a,
+.pagination-links .pagination .active span {
+    background-color: #0056b3; /* Active button same as hover */
+    color: white;
+}
+
+
 .container {
     width: 80%;
     margin: auto;

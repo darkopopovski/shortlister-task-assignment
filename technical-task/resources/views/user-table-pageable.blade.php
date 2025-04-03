@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User List</title>
+    <title>User Page</title>
     <link rel="stylesheet" href="{{ asset('css/user-table.css') }}">
 </head>
 <body>
     <div class="container">
-        <h2>USER LIST</h2>
+        <h2>USER PAGE</h2>
         <table>
             <thead>
                 <tr>
@@ -28,7 +28,16 @@
                     <td>{{ $user->phone }}</td>
                     <td>{{ $user->age }}</td>
                 </tr>
+                
                 @endforeach
+                
+                <div class="pagination-container">
+                    @if ($users->hasPages())
+                        <div class="pagination-links">
+                            {{ $users->links('pagination::bootstrap-4') }}
+                        </div>
+                    @endif
+                </div>
             </tbody>
         </table>
     </div>

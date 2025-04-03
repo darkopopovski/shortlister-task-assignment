@@ -8,3 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('users', [UserController::class, 'getUsers']);
+Route::get('users/pageable', [UserController::class, 'getUsersPageable']);
+Route::get('users/create', [UserController::class, 'createUserView']);
+Route::post('users', [UserController::class, 'createUser']);
+
