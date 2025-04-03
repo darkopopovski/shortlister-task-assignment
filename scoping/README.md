@@ -37,3 +37,8 @@ Since the current implementation allows only one email to be used for each compa
 NOTE: This is similar for example of fraud or moderation services that are popular in the systems nowdays.
 
 
+### Alghoritmic Diagram (How i was thinking when everything will be merged together)
+![Alt Text](https://i.ibb.co/m5STnx7k/algorithmic-diagram.png)
+
+
+
