@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Http\Responses\UserResponse;
 use App\Repositories\UserRepositoryInterface;
 
 class UserService {
@@ -12,7 +13,8 @@ class UserService {
     }
 
     public function getUsers(){
-        return $this->userRepository->findAll();
+        return $this->userRepository->findAll()
+                    ->map(fn($user) => UserResponse::fromUser($user));
     }
 
     public function getUsersPageable($pageSize) {

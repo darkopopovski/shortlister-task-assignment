@@ -16,6 +16,7 @@
                     <th>Full Name</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Mail To</th>
                     <th>Age</th>
                 </tr>
             </thead>
@@ -26,6 +27,7 @@
                     <td>{{ $user->fullName }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->phone }}</td>
+                    <td> <a href="send-email/{{ $user->email }}"> Link</a> </td>
                     <td>{{ $user->age }}</td>
                 </tr>
                 @endforeach
