@@ -18,7 +18,8 @@ class UserService {
     }
 
     public function getUsersPageable($pageSize) {
-        return $this->userRepository->findAllPageable($pageSize);
+        return $this->userRepository->findAllPageable($pageSize)
+                    ->through(fn($user) => UserResponse::fromUser($user));
     }
 
     public function createUser(array $data) {

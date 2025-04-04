@@ -16,6 +16,7 @@
                     <th>Full Name</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Mail To</th>
                     <th>Age</th>
                 </tr>
             </thead>
